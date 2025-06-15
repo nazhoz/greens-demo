@@ -19,18 +19,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {/* Navigation bar inside layout */}
-          <Nav />
-
-          <div className="pt-[100px]">{children}</div>
-          <Footer />
-        </ThemeProvider>
+        {/* Navigation bar inside layout */}
+        <Nav />
+        <div className="pt-[100px]">{children}</div>
+        <Footer />
       </body>
     </html>
   );
